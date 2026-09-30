@@ -1,0 +1,5 @@
+# robots.txt — Cisterne Audiovisual
+User-agent: *
+Allow: /
+
+Sitemap: https://[TU-DOMINIO]/sitemap.xml

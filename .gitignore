@@ -1,0 +1,34 @@
+# dependencies
+node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# editors
+.vscode/
+.idea/
+
+# Hermes scratch / runtime
+.qr/
+qr/
+
+# temp / logs
+*.log
+*.tmp
+
+# large binaries not in version control — keep source assets only
+# (uncomment next line ONLY if you want to push without the ~30MB of videos)
+# assets/videos/reel.mp4
+# assets/videos/work-*.mp4
+
+# secrets / env
+.env
+.env.local
