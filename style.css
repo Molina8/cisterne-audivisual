@@ -131,10 +131,11 @@ figure { margin: 0; }
 }
 .hero__title {
   margin: 0;
-  font-weight: var(--f-weight-thin);
-  font-size: clamp(var(--t-40), 8vw, var(--t-72));
+  font-weight: var(--f-weight-light);
+  font-size: clamp(var(--t-24), 6.5vw, 60px);
   line-height: 1;
   letter-spacing: 0.05em;
+  white-space: nowrap;
 }
 .hero__tag {
   margin: 0;
@@ -143,6 +144,7 @@ figure { margin: 0; }
   text-transform: uppercase;
   color: var(--c-meta);
   font-weight: var(--f-weight-light);
+  white-space: nowrap;
 }
 
 /* =========================================================
