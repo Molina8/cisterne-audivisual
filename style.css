@@ -460,15 +460,18 @@ figure { margin: 0; }
 }
 
 /* =========================================================
-   PROJECTS CAROUSEL (horizontal scroll-snap)
+   PROJECTS PAGE (vertical stack)
    ========================================================= */
-.body--carousel {
-  overflow: hidden;
-  height: 100vh;
+.body--projects {
+  overflow-x: hidden;
 }
-.nav--carousel {
+.nav--projects {
   mix-blend-mode: normal;
   background: transparent;
+  pointer-events: none; /* empty header strip does not steal clicks */
+}
+.nav--projects > * {
+  pointer-events: auto;
 }
 .nav__counter {
   font-size: var(--t-12);
@@ -483,41 +486,28 @@ figure { margin: 0; }
   color: var(--c-rule);
 }
 
-.carousel {
+.projects {
   display: flex;
-  flex-direction: row;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  height: 100vh;
-  width: 100vw;
-  scrollbar-width: none;          /* Firefox */
-  -ms-overflow-style: none;       /* old Edge / IE */
-}
-.carousel::-webkit-scrollbar {
-  display: none;                  /* Chromium / Safari */
+  flex-direction: column;
+  width: 100%;
 }
 .slide {
-  flex: 0 0 100vw;
-  width: 100vw;
-  height: 100vh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  width: 100%;
+  min-height: 100vh;
   position: relative;
   background: var(--c-bg);
-  overflow-y: auto;
 }
 .slide__back {
   position: absolute;
-  top: var(--s-3);
+  top: calc(var(--s-8) + var(--s-3));
   left: var(--s-12);
   font-size: var(--t-12);
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--c-meta);
   font-weight: var(--f-weight-light);
-  z-index: 5;
+  z-index: 6;
+  pointer-events: auto;
 }
 .slide__back:hover,
 .slide__back:focus-visible { color: var(--c-fg); outline: none; }
@@ -659,25 +649,7 @@ figure { margin: 0; }
   min-width: 1.6em;
 }
 
-/* Scroll hint */
-.hint {
-  position: fixed;
-  bottom: var(--s-6);
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: var(--t-12);
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--c-meta);
-  font-weight: var(--f-weight-light);
-  pointer-events: none;
-  z-index: 30;
-  opacity: 1;
-  transition: opacity 600ms linear;
-}
-.hint--hidden { opacity: 0; }
-
-/* Carousel responsive */
+/* Projects page responsive */
 @media (max-width: 960px) {
   .work-list--vertical {
     grid-template-columns: repeat(3, 1fr);
@@ -693,6 +665,9 @@ figure { margin: 0; }
   .slide__panel {
     border-left: none;
     border-top: 1px solid var(--c-rule);
+  }
+  .slide__back {
+    left: var(--s-6);
   }
   .dots {
     left: var(--s-2);
@@ -712,6 +687,10 @@ figure { margin: 0; }
 @media (max-width: 720px) {
   .nav {
     padding: var(--s-2) var(--s-3);
+  }
+  .slide__back {
+    left: var(--s-4);
+    top: calc(var(--s-6) + var(--s-2));
   }
   .nav__links {
     gap: var(--s-2);

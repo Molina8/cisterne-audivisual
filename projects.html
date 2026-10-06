@@ -59,10 +59,10 @@
   }
   </script>
 </head>
-<body class="body--carousel">
+<body class="body--projects">
 
   <!-- Same fixed nav as the rest of the site -->
-  <header class="nav nav--carousel" role="banner">
+  <header class="nav nav--projects" role="banner">
     <a class="nav__logo" href="index.html" aria-label="Fran Cisterne — inicio">
       <svg viewBox="0 0 360 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <text x="0" y="18" class="logo__text">FRAN CISTERNE</text>
@@ -77,128 +77,23 @@
     <div class="nav__counter" aria-live="polite"><span id="counter-current">01</span><span class="counter__sep">/</span><span id="counter-total">11</span></div>
   </header>
 
-  <!-- Left-edge dot navigator (Zara-style) -->
+  <!-- Left-edge dot navigator -->
   <nav class="dots" aria-label="Selector de proyecto">
-      <a class="dots__item" href="#slide-1" data-target="1" aria-label="Ir a Gala Elección Abanderadas"><span class="dots__num">01</span></a>
-      <a class="dots__item" href="#slide-2" data-target="2" aria-label="Ir a Made with Calma"><span class="dots__num">02</span></a>
-      <a class="dots__item" href="#slide-3" data-target="3" aria-label="Ir a Marvimundo"><span class="dots__num">03</span></a>
-      <a class="dots__item" href="#slide-4" data-target="4" aria-label="Ir a Día de la Madre"><span class="dots__num">04</span></a>
-      <a class="dots__item" href="#slide-5" data-target="5" aria-label="Ir a Día del Padre"><span class="dots__num">05</span></a>
-      <a class="dots__item" href="#slide-6" data-target="6" aria-label="Ir a Cómo se sirve el vino en verano"><span class="dots__num">06</span></a>
-      <a class="dots__item" href="#slide-7" data-target="7" aria-label="Ir a Campaña Verano Ego Barco"><span class="dots__num">07</span></a>
-      <a class="dots__item" href="#slide-8" data-target="8" aria-label="Ir a Tracksuit DLFC"><span class="dots__num">08</span></a>
-      <a class="dots__item" href="#slide-9" data-target="9" aria-label="Ir a Granada 2026 Jaleo"><span class="dots__num">09</span></a>
-      <a class="dots__item" href="#slide-10" data-target="10" aria-label="Ir a Elysium"><span class="dots__num">10</span></a>
-      <a class="dots__item" href="#slide-11" data-target="11" aria-label="Ir a Laura y Daniel"><span class="dots__num">11</span></a>
+      <a class="dots__item" href="#slide-1" data-target="1" aria-label="Ir a Cómo se sirve el vino en verano"><span class="dots__num">01</span></a>
+      <a class="dots__item" href="#slide-2" data-target="2" aria-label="Ir a Campaña Verano Ego Barco"><span class="dots__num">02</span></a>
+      <a class="dots__item" href="#slide-3" data-target="3" aria-label="Ir a Tracksuit DLFC"><span class="dots__num">03</span></a>
+      <a class="dots__item" href="#slide-4" data-target="4" aria-label="Ir a Granada 2026 Jaleo"><span class="dots__num">04</span></a>
+      <a class="dots__item" href="#slide-5" data-target="5" aria-label="Ir a Elysium"><span class="dots__num">05</span></a>
+      <a class="dots__item" href="#slide-6" data-target="6" aria-label="Ir a Laura y Daniel"><span class="dots__num">06</span></a>
+      <a class="dots__item" href="#slide-7" data-target="7" aria-label="Ir a Gala Elección Abanderadas"><span class="dots__num">07</span></a>
+      <a class="dots__item" href="#slide-8" data-target="8" aria-label="Ir a Made with Calma"><span class="dots__num">08</span></a>
+      <a class="dots__item" href="#slide-9" data-target="9" aria-label="Ir a Marvimundo"><span class="dots__num">09</span></a>
+      <a class="dots__item" href="#slide-10" data-target="10" aria-label="Ir a Día de la Madre"><span class="dots__num">10</span></a>
+      <a class="dots__item" href="#slide-11" data-target="11" aria-label="Ir a Día del Padre"><span class="dots__num">11</span></a>
   </nav>
 
-  <!-- Scroll hint -->
-  <div class="hint" aria-hidden="true">Desliza o usa las flechas →</div>
-
-  <!-- Horizontal scroll container: vertical wheel -> horizontal scroll -->
-  <main class="carousel" id="carousel">
-    <section class="slide slide--portrait" id="slide-1" data-project="gala-eleccion-abanderadas-2026" aria-label="Gala Elección Abanderadas">
-      <a class="slide__back" href="index.html">← Índice</a>
-      <div class="slide__layout">
-        <div class="slide__media">
-          <video class="slide__video" controls preload="none" poster="assets/videos/vertical/gala-eleccion-abanderadas-2026.jpg">
-            <source src="assets/videos/vertical/gala-eleccion-abanderadas-2026.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <aside class="slide__panel">
-          <header class="slide__head">
-            <h2 class="slide__title">Gala Elección Abanderadas</h2>
-            <p class="slide__meta">Vertical · 2026 · 01:02</p>
-          </header>
-          <p class="slide__lead">Pieza vertical de la Gala Elección de Abanderadas 2026.</p>
-          <dl class="slide__credits">
-            <dt>Dirección</dt><dd>Fran Cisterne</dd>
-            <dt>Año</dt><dd>2026</dd>
-          </dl>
-        </aside>
-      </div>
-    </section>
-    <section class="slide slide--portrait" id="slide-2" data-project="madewithcalma-x-egobodegas" aria-label="Made with Calma × Ego Bodegas">
-      <a class="slide__back" href="index.html">← Índice</a>
-      <div class="slide__layout">
-        <div class="slide__media">
-          <video class="slide__video" controls preload="none" poster="assets/videos/vertical/madewithcalma-x-egobodegas.jpg">
-            <source src="assets/videos/vertical/madewithcalma-x-egobodegas.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <aside class="slide__panel">
-          <header class="slide__head">
-            <h2 class="slide__title">Made with Calma × Ego Bodegas</h2>
-            <p class="slide__meta">Vertical · 00:46</p>
-          </header>
-          <p class="slide__lead">Pieza vertical para Made with Calma y Ego Bodegas.</p>
-          <dl class="slide__credits">
-            <dt>Dirección</dt><dd>Fran Cisterne</dd>
-          </dl>
-        </aside>
-      </div>
-    </section>
-    <section class="slide slide--portrait" id="slide-3" data-project="marvimundo-x-fanfutura" aria-label="Marvimundo × Fanfutura">
-      <a class="slide__back" href="index.html">← Índice</a>
-      <div class="slide__layout">
-        <div class="slide__media">
-          <video class="slide__video" controls preload="none" poster="assets/videos/vertical/marvimundo-x-fanfutura.jpg">
-            <source src="assets/videos/vertical/marvimundo-x-fanfutura.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <aside class="slide__panel">
-          <header class="slide__head">
-            <h2 class="slide__title">Marvimundo × Fanfutura</h2>
-            <p class="slide__meta">Vertical · 00:45</p>
-          </header>
-          <p class="slide__lead">Pieza vertical para Marvimundo y Fanfutura.</p>
-          <dl class="slide__credits">
-            <dt>Dirección</dt><dd>Fran Cisterne</dd>
-          </dl>
-        </aside>
-      </div>
-    </section>
-    <section class="slide slide--portrait" id="slide-4" data-project="dia-de-la-madre-ego-bodegas" aria-label="Día de la Madre — Ego Bodegas">
-      <a class="slide__back" href="index.html">← Índice</a>
-      <div class="slide__layout">
-        <div class="slide__media">
-          <video class="slide__video" controls preload="none" poster="assets/videos/vertical/dia-de-la-madre-ego-bodegas.jpg">
-            <source src="assets/videos/vertical/dia-de-la-madre-ego-bodegas.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <aside class="slide__panel">
-          <header class="slide__head">
-            <h2 class="slide__title">Día de la Madre</h2>
-            <p class="slide__meta">Vertical · Ego Bodegas · 01:22</p>
-          </header>
-          <p class="slide__lead">Pieza vertical de Ego Bodegas para el Día de la Madre.</p>
-          <dl class="slide__credits">
-            <dt>Dirección</dt><dd>Fran Cisterne</dd>
-          </dl>
-        </aside>
-      </div>
-    </section>
-    <section class="slide slide--portrait" id="slide-5" data-project="dia-del-padre-ego-bodegas" aria-label="Día del Padre — Ego Bodegas">
-      <a class="slide__back" href="index.html">← Índice</a>
-      <div class="slide__layout">
-        <div class="slide__media">
-          <video class="slide__video" controls preload="none" poster="assets/videos/vertical/dia-del-padre-ego-bodegas.jpg">
-            <source src="assets/videos/vertical/dia-del-padre-ego-bodegas.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <aside class="slide__panel">
-          <header class="slide__head">
-            <h2 class="slide__title">Día del Padre</h2>
-            <p class="slide__meta">Vertical · Ego Bodegas · 00:59</p>
-          </header>
-          <p class="slide__lead">Pieza vertical de Ego Bodegas para el Día del Padre.</p>
-          <dl class="slide__credits">
-            <dt>Dirección</dt><dd>Fran Cisterne</dd>
-          </dl>
-        </aside>
-      </div>
-    </section>
-    <section class="slide" id="slide-6" data-project="campana-ego-vino-verano" aria-label="Cómo se sirve el vino en verano">
+  <main class="projects" id="projects">
+    <section class="slide" id="slide-1" data-project="campana-ego-vino-verano" aria-label="Cómo se sirve el vino en verano">
       <a class="slide__back" href="index.html">← Índice</a>
       <div class="slide__layout">
         <div class="slide__media">
@@ -224,7 +119,7 @@
         </aside>
       </div>
     </section>
-    <section class="slide" id="slide-7" data-project="campana-verano-ego-barco" aria-label="Campaña Verano Ego Barco">
+    <section class="slide" id="slide-2" data-project="campana-verano-ego-barco" aria-label="Campaña Verano Ego Barco">
       <a class="slide__back" href="index.html">← Índice</a>
       <div class="slide__layout">
         <div class="slide__media">
@@ -250,7 +145,7 @@
         </aside>
       </div>
     </section>
-    <section class="slide slide--contain" id="slide-8" data-project="tracksuit-dlfc-24-25" aria-label="Tracksuit DLFC 24/25">
+    <section class="slide slide--contain" id="slide-3" data-project="tracksuit-dlfc-24-25" aria-label="Tracksuit DLFC 24/25">
       <a class="slide__back" href="index.html">← Índice</a>
       <div class="slide__layout">
         <div class="slide__media">
@@ -270,7 +165,7 @@
         </aside>
       </div>
     </section>
-    <section class="slide" id="slide-9" data-project="granada-2026-jaleo" aria-label="Granada 2026 — Jaleo">
+    <section class="slide" id="slide-4" data-project="granada-2026-jaleo" aria-label="Granada 2026 — Jaleo">
       <a class="slide__back" href="index.html">← Índice</a>
       <div class="slide__layout">
         <div class="slide__media">
@@ -291,7 +186,7 @@
         </aside>
       </div>
     </section>
-    <section class="slide" id="slide-10" data-project="elysium-corporativo-obra" aria-label="Elysium — Corporativo">
+    <section class="slide" id="slide-5" data-project="elysium-corporativo-obra" aria-label="Elysium — Corporativo">
       <a class="slide__back" href="index.html">← Índice</a>
       <div class="slide__layout">
         <div class="slide__media">
@@ -311,7 +206,7 @@
         </aside>
       </div>
     </section>
-    <section class="slide" id="slide-11" data-project="laura-y-daniel" aria-label="Laura y Daniel">
+    <section class="slide" id="slide-6" data-project="laura-y-daniel" aria-label="Laura y Daniel">
       <a class="slide__back" href="index.html">← Índice</a>
       <div class="slide__layout">
         <div class="slide__media">
@@ -331,92 +226,140 @@
         </aside>
       </div>
     </section>
+    <section class="slide slide--portrait" id="slide-7" data-project="gala-eleccion-abanderadas-2026" aria-label="Gala Elección Abanderadas">
+      <a class="slide__back" href="index.html">← Índice</a>
+      <div class="slide__layout">
+        <div class="slide__media">
+          <video class="slide__video" controls preload="none" poster="assets/videos/vertical/gala-eleccion-abanderadas-2026.jpg">
+            <source src="assets/videos/vertical/gala-eleccion-abanderadas-2026.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <aside class="slide__panel">
+          <header class="slide__head">
+            <h2 class="slide__title">Gala Elección Abanderadas</h2>
+            <p class="slide__meta">Vertical · 2026 · 01:02</p>
+          </header>
+          <p class="slide__lead">Pieza vertical de la Gala Elección de Abanderadas 2026.</p>
+          <dl class="slide__credits">
+            <dt>Dirección</dt><dd>Fran Cisterne</dd>
+            <dt>Año</dt><dd>2026</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+    <section class="slide slide--portrait" id="slide-8" data-project="madewithcalma-x-egobodegas" aria-label="Made with Calma × Ego Bodegas">
+      <a class="slide__back" href="index.html">← Índice</a>
+      <div class="slide__layout">
+        <div class="slide__media">
+          <video class="slide__video" controls preload="none" poster="assets/videos/vertical/madewithcalma-x-egobodegas.jpg">
+            <source src="assets/videos/vertical/madewithcalma-x-egobodegas.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <aside class="slide__panel">
+          <header class="slide__head">
+            <h2 class="slide__title">Made with Calma × Ego Bodegas</h2>
+            <p class="slide__meta">Vertical · 00:46</p>
+          </header>
+          <p class="slide__lead">Pieza vertical para Made with Calma y Ego Bodegas.</p>
+          <dl class="slide__credits">
+            <dt>Dirección</dt><dd>Fran Cisterne</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+    <section class="slide slide--portrait" id="slide-9" data-project="marvimundo-x-fanfutura" aria-label="Marvimundo × Fanfutura">
+      <a class="slide__back" href="index.html">← Índice</a>
+      <div class="slide__layout">
+        <div class="slide__media">
+          <video class="slide__video" controls preload="none" poster="assets/videos/vertical/marvimundo-x-fanfutura.jpg">
+            <source src="assets/videos/vertical/marvimundo-x-fanfutura.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <aside class="slide__panel">
+          <header class="slide__head">
+            <h2 class="slide__title">Marvimundo × Fanfutura</h2>
+            <p class="slide__meta">Vertical · 00:45</p>
+          </header>
+          <p class="slide__lead">Pieza vertical para Marvimundo y Fanfutura.</p>
+          <dl class="slide__credits">
+            <dt>Dirección</dt><dd>Fran Cisterne</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+    <section class="slide slide--portrait" id="slide-10" data-project="dia-de-la-madre-ego-bodegas" aria-label="Día de la Madre — Ego Bodegas">
+      <a class="slide__back" href="index.html">← Índice</a>
+      <div class="slide__layout">
+        <div class="slide__media">
+          <video class="slide__video" controls preload="none" poster="assets/videos/vertical/dia-de-la-madre-ego-bodegas.jpg">
+            <source src="assets/videos/vertical/dia-de-la-madre-ego-bodegas.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <aside class="slide__panel">
+          <header class="slide__head">
+            <h2 class="slide__title">Día de la Madre</h2>
+            <p class="slide__meta">Vertical · Ego Bodegas · 01:22</p>
+          </header>
+          <p class="slide__lead">Pieza vertical de Ego Bodegas para el Día de la Madre.</p>
+          <dl class="slide__credits">
+            <dt>Dirección</dt><dd>Fran Cisterne</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+    <section class="slide slide--portrait" id="slide-11" data-project="dia-del-padre-ego-bodegas" aria-label="Día del Padre — Ego Bodegas">
+      <a class="slide__back" href="index.html">← Índice</a>
+      <div class="slide__layout">
+        <div class="slide__media">
+          <video class="slide__video" controls preload="none" poster="assets/videos/vertical/dia-del-padre-ego-bodegas.jpg">
+            <source src="assets/videos/vertical/dia-del-padre-ego-bodegas.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <aside class="slide__panel">
+          <header class="slide__head">
+            <h2 class="slide__title">Día del Padre</h2>
+            <p class="slide__meta">Vertical · Ego Bodegas · 00:59</p>
+          </header>
+          <p class="slide__lead">Pieza vertical de Ego Bodegas para el Día del Padre.</p>
+          <dl class="slide__credits">
+            <dt>Dirección</dt><dd>Fran Cisterne</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
   </main>
 
-  <!-- Inline JS: vertical wheel -> horizontal scroll; keyboard arrows; active dot sync -->
+  <!-- Inline JS: vertical scroll; active dot + counter sync -->
   <script>
     (function() {
-      const carousel = document.getElementById('carousel');
-      const slides   = carousel.querySelectorAll('.slide');
-      const dots     = document.querySelectorAll('.dots__item');
+      const root = document.getElementById('projects');
+      const slides = root.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dots__item');
       const counterCur = document.getElementById('counter-current');
-      let activeIdx = 0;
       const counterTotal = document.getElementById('counter-total');
       if (counterTotal) counterTotal.textContent = String(slides.length).padStart(2, '0');
 
-      function setActive(i) {
-        activeIdx = Math.max(0, Math.min(slides.length - 1, i));
-        slides[activeIdx].scrollIntoView({behavior: 'smooth', inline: 'start', block: 'nearest'});
-        updateUI();
-      }
+      let activeIdx = 0;
 
       function updateUI() {
         dots.forEach((d, j) => d.classList.toggle('is-active', j === activeIdx));
         if (counterCur) counterCur.textContent = String(activeIdx + 1).padStart(2, '0');
       }
 
-      // Track active slide via IntersectionObserver
       const io = new IntersectionObserver((entries) => {
         entries.forEach((e) => {
-          if (e.isIntersecting && e.intersectionRatio > 0.6) {
+          if (e.isIntersecting && e.intersectionRatio > 0.5) {
             const i = Array.from(slides).indexOf(e.target);
             if (i >= 0) { activeIdx = i; updateUI(); }
           }
         });
-      }, {root: carousel, threshold: [0.6, 0.8]});
+      }, { threshold: [0.5, 0.7] });
       slides.forEach(s => io.observe(s));
 
-      // Vertical wheel -> horizontal scroll (deltaX multiplier).
-      // We don't preventDefault if the user is scrolling inside an inner scrollable
-      // element (e.g. credits / gallery on mobile), but the carousel itself
-      // is the only horizontal scroller, so vertical wheel on the carousel
-      // always translates to horizontal.
-      let wheelLock = false;
-      carousel.addEventListener('wheel', (e) => {
-        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-          // Translate vertical wheel to horizontal scroll
-          e.preventDefault();
-          if (wheelLock) return;
-          wheelLock = true;
-          const dir = e.deltaY > 0 ? 1 : -1;
-          setActive(activeIdx + dir);
-          setTimeout(() => { wheelLock = false; }, 600);
-        }
-      }, {passive: false});
-
-      // Keyboard arrows + Home/End
-      document.addEventListener('keydown', (e) => {
-        if (e.target.matches('input,textarea,select')) return;
-        if (e.key === 'ArrowRight' || e.key === 'PageDown') { setActive(activeIdx + 1); e.preventDefault(); }
-        if (e.key === 'ArrowLeft'  || e.key === 'PageUp')   { setActive(activeIdx - 1); e.preventDefault(); }
-        if (e.key === 'Home') { setActive(0); e.preventDefault(); }
-        if (e.key === 'End')  { setActive(slides.length - 1); e.preventDefault(); }
-      });
-
-      // Touch swipe (basic, native horizontal scroll-snap already covers most)
-      let touchStartX = 0;
-      carousel.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].clientX;
-      }, {passive: true});
-
-      // Hide hint after first interaction
-      const hint = document.querySelector('.hint');
-      let hintHidden = false;
-      function hideHint() {
-        if (hintHidden || !hint) return;
-        hintHidden = true;
-        hint.classList.add('hint--hidden');
-      }
-      carousel.addEventListener('wheel', hideHint, {once: true, passive: true});
-      carousel.addEventListener('touchstart', hideHint, {once: true, passive: true});
-      carousel.addEventListener('scroll', hideHint, {once: true, passive: true});
-      setTimeout(hideHint, 5000);  // also fade after 5s
-
-      // Click on dot -> setActive (the anchor jump happens too, smooth-scroll)
       dots.forEach((d, j) => {
         d.addEventListener('click', (e) => {
           e.preventDefault();
-          setActive(j);
+          slides[j].scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
       });
 
@@ -424,22 +367,7 @@
     })();
   </script>
 
-  <!-- Per-slide VideoObject JSON-LD (one script tag per project) -->
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"VideoObject","name":"Gala Elección Abanderadas","description":"Pieza vertical de la Gala Elección de Abanderadas 2026.","thumbnailUrl":"https://[TU-DOMINIO]/assets/videos/vertical/gala-eleccion-abanderadas-2026.jpg","contentUrl":"https://[TU-DOMINIO]/assets/videos/vertical/gala-eleccion-abanderadas-2026.mp4","uploadDate":"2026-10-06","duration":"PT1M2S","director":{"@type":"Person","name":"Fran Cisterne"}}
-  </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"VideoObject","name":"Made with Calma × Ego Bodegas","description":"Pieza vertical para Made with Calma y Ego Bodegas.","thumbnailUrl":"https://[TU-DOMINIO]/assets/videos/vertical/madewithcalma-x-egobodegas.jpg","contentUrl":"https://[TU-DOMINIO]/assets/videos/vertical/madewithcalma-x-egobodegas.mp4","uploadDate":"2026-10-06","duration":"PT46S","director":{"@type":"Person","name":"Fran Cisterne"}}
-  </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"VideoObject","name":"Marvimundo × Fanfutura","description":"Pieza vertical para Marvimundo y Fanfutura.","thumbnailUrl":"https://[TU-DOMINIO]/assets/videos/vertical/marvimundo-x-fanfutura.jpg","contentUrl":"https://[TU-DOMINIO]/assets/videos/vertical/marvimundo-x-fanfutura.mp4","uploadDate":"2026-10-06","duration":"PT45S","director":{"@type":"Person","name":"Fran Cisterne"}}
-  </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"VideoObject","name":"Día de la Madre","description":"Pieza vertical de Ego Bodegas para el Día de la Madre.","thumbnailUrl":"https://[TU-DOMINIO]/assets/videos/vertical/dia-de-la-madre-ego-bodegas.jpg","contentUrl":"https://[TU-DOMINIO]/assets/videos/vertical/dia-de-la-madre-ego-bodegas.mp4","uploadDate":"2026-10-06","duration":"PT1M22S","director":{"@type":"Person","name":"Fran Cisterne"}}
-  </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"VideoObject","name":"Día del Padre","description":"Pieza vertical de Ego Bodegas para el Día del Padre.","thumbnailUrl":"https://[TU-DOMINIO]/assets/videos/vertical/dia-del-padre-ego-bodegas.jpg","contentUrl":"https://[TU-DOMINIO]/assets/videos/vertical/dia-del-padre-ego-bodegas.mp4","uploadDate":"2026-10-06","duration":"PT59S","director":{"@type":"Person","name":"Fran Cisterne"}}
-  </script>
+  <!-- Per-slide VideoObject JSON-LD (one script tag per project, page order) -->
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"VideoObject","name":"Cómo se sirve el vino en verano","description":"Campaña de Ego: cómo se sirve el vino en verano.","thumbnailUrl":"https://[TU-DOMINIO]/assets/videos/horizontal/campana-ego-vino-verano.jpg","contentUrl":"https://[TU-DOMINIO]/assets/videos/horizontal/campana-ego-vino-verano.mp4","uploadDate":"2026-10-06","duration":"PT32S","director":{"@type":"Person","name":"Fran Cisterne"}}
   </script>
@@ -457,6 +385,21 @@
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"VideoObject","name":"Laura y Daniel","description":"Vídeo de Laura y Daniel.","thumbnailUrl":"https://[TU-DOMINIO]/assets/videos/horizontal/laura-y-daniel.jpg","contentUrl":"https://[TU-DOMINIO]/assets/videos/horizontal/laura-y-daniel.mp4","uploadDate":"2026-10-06","duration":"PT2M45S","director":{"@type":"Person","name":"Fran Cisterne"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"VideoObject","name":"Gala Elección Abanderadas","description":"Pieza vertical de la Gala Elección de Abanderadas 2026.","thumbnailUrl":"https://[TU-DOMINIO]/assets/videos/vertical/gala-eleccion-abanderadas-2026.jpg","contentUrl":"https://[TU-DOMINIO]/assets/videos/vertical/gala-eleccion-abanderadas-2026.mp4","uploadDate":"2026-10-06","duration":"PT1M2S","director":{"@type":"Person","name":"Fran Cisterne"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"VideoObject","name":"Made with Calma × Ego Bodegas","description":"Pieza vertical para Made with Calma y Ego Bodegas.","thumbnailUrl":"https://[TU-DOMINIO]/assets/videos/vertical/madewithcalma-x-egobodegas.jpg","contentUrl":"https://[TU-DOMINIO]/assets/videos/vertical/madewithcalma-x-egobodegas.mp4","uploadDate":"2026-10-06","duration":"PT46S","director":{"@type":"Person","name":"Fran Cisterne"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"VideoObject","name":"Marvimundo × Fanfutura","description":"Pieza vertical para Marvimundo y Fanfutura.","thumbnailUrl":"https://[TU-DOMINIO]/assets/videos/vertical/marvimundo-x-fanfutura.jpg","contentUrl":"https://[TU-DOMINIO]/assets/videos/vertical/marvimundo-x-fanfutura.mp4","uploadDate":"2026-10-06","duration":"PT45S","director":{"@type":"Person","name":"Fran Cisterne"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"VideoObject","name":"Día de la Madre","description":"Pieza vertical de Ego Bodegas para el Día de la Madre.","thumbnailUrl":"https://[TU-DOMINIO]/assets/videos/vertical/dia-de-la-madre-ego-bodegas.jpg","contentUrl":"https://[TU-DOMINIO]/assets/videos/vertical/dia-de-la-madre-ego-bodegas.mp4","uploadDate":"2026-10-06","duration":"PT1M22S","director":{"@type":"Person","name":"Fran Cisterne"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"VideoObject","name":"Día del Padre","description":"Pieza vertical de Ego Bodegas para el Día del Padre.","thumbnailUrl":"https://[TU-DOMINIO]/assets/videos/vertical/dia-del-padre-ego-bodegas.jpg","contentUrl":"https://[TU-DOMINIO]/assets/videos/vertical/dia-del-padre-ego-bodegas.mp4","uploadDate":"2026-10-06","duration":"PT59S","director":{"@type":"Person","name":"Fran Cisterne"}}
   </script>
 </body>
 </html>
