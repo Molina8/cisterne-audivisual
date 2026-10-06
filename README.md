@@ -39,5 +39,5 @@ Web copies are H.264, max 1080p, so they fit GitHub Pages (100 MB per file). Ori
 - Inter Thin (100) from Google Fonts, with `system-ui` fallback.
 - CSS native, no framework. One `:root` token block.
 - Lazy images, autoplay-muted hero video.
-- No JS runtime, no Tailwind.
+- No framework. `projects.html` uses a few lines of vanilla JS to show one project from `?project=`.
 - Targets Lighthouse Performance ≥ 95.

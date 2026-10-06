@@ -25,6 +25,7 @@
 
   <link rel="canonical" href="https://[TU-DOMINIO]/projects.html" />
   <link rel="stylesheet" href="style.css" />
+  <script>document.documentElement.classList.add("js");</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -74,23 +75,7 @@
       <a href="index.html#about">Sobre mí</a>
       <a href="index.html#contact">Contacto</a>
     </nav>
-    <div class="nav__counter" aria-live="polite"><span id="counter-current">01</span><span class="counter__sep">/</span><span id="counter-total">11</span></div>
   </header>
-
-  <!-- Left-edge dot navigator -->
-  <nav class="dots" aria-label="Selector de proyecto">
-      <a class="dots__item" href="#slide-1" data-target="1" aria-label="Ir a Cómo se sirve el vino en verano"><span class="dots__num">01</span></a>
-      <a class="dots__item" href="#slide-2" data-target="2" aria-label="Ir a Campaña Verano Ego Barco"><span class="dots__num">02</span></a>
-      <a class="dots__item" href="#slide-3" data-target="3" aria-label="Ir a Tracksuit DLFC"><span class="dots__num">03</span></a>
-      <a class="dots__item" href="#slide-4" data-target="4" aria-label="Ir a Granada 2026 Jaleo"><span class="dots__num">04</span></a>
-      <a class="dots__item" href="#slide-5" data-target="5" aria-label="Ir a Elysium"><span class="dots__num">05</span></a>
-      <a class="dots__item" href="#slide-6" data-target="6" aria-label="Ir a Laura y Daniel"><span class="dots__num">06</span></a>
-      <a class="dots__item" href="#slide-7" data-target="7" aria-label="Ir a Gala Elección Abanderadas"><span class="dots__num">07</span></a>
-      <a class="dots__item" href="#slide-8" data-target="8" aria-label="Ir a Made with Calma"><span class="dots__num">08</span></a>
-      <a class="dots__item" href="#slide-9" data-target="9" aria-label="Ir a Marvimundo"><span class="dots__num">09</span></a>
-      <a class="dots__item" href="#slide-10" data-target="10" aria-label="Ir a Día de la Madre"><span class="dots__num">10</span></a>
-      <a class="dots__item" href="#slide-11" data-target="11" aria-label="Ir a Día del Padre"><span class="dots__num">11</span></a>
-  </nav>
 
   <main class="projects" id="projects">
     <section class="slide" id="slide-1" data-project="campana-ego-vino-verano" aria-label="Cómo se sirve el vino en verano">
@@ -329,77 +314,103 @@
     </section>
   </main>
 
-  <!-- Inline JS: vertical scroll; active dot + counter sync -->
-  <script>
-    (function() {
-      const root = document.getElementById('projects');
-      const slides = root.querySelectorAll('.slide');
-      const dots = document.querySelectorAll('.dots__item');
-      const counterCur = document.getElementById('counter-current');
-      const counterTotal = document.getElementById('counter-total');
-      if (counterTotal) counterTotal.textContent = String(slides.length).padStart(2, '0');
-
-      let activeIdx = 0;
-
-      function updateUI() {
-        dots.forEach((d, j) => d.classList.toggle('is-active', j === activeIdx));
-        if (counterCur) counterCur.textContent = String(activeIdx + 1).padStart(2, '0');
-      }
-
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting && e.intersectionRatio > 0.5) {
-            const i = Array.from(slides).indexOf(e.target);
-            if (i >= 0) { activeIdx = i; updateUI(); }
-          }
-        });
-      }, { threshold: [0.5, 0.7] });
-      slides.forEach(s => io.observe(s));
-
-      dots.forEach((d, j) => {
-        d.addEventListener('click', (e) => {
-          e.preventDefault();
-          slides[j].scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-      });
-
-      updateUI();
-    })();
-  </script>
-
   <!-- Per-slide VideoObject JSON-LD (one script tag per project, page order) -->
-  <script type="application/ld+json">
+  <script type="application/ld+json" data-project="campana-ego-vino-verano">
   {"@context":"https://schema.org","@type":"VideoObject","name":"Cómo se sirve el vino en verano","description":"Campaña de Ego: cómo se sirve el vino en verano.","thumbnailUrl":"https://[TU-DOMINIO]/assets/videos/horizontal/campana-ego-vino-verano.jpg","contentUrl":"https://[TU-DOMINIO]/assets/videos/horizontal/campana-ego-vino-verano.mp4","uploadDate":"2026-10-06","duration":"PT32S","director":{"@type":"Person","name":"Fran Cisterne"}}
   </script>
-  <script type="application/ld+json">
+  <script type="application/ld+json" data-project="campana-verano-ego-barco">
   {"@context":"https://schema.org","@type":"VideoObject","name":"Campaña Verano Ego Barco","description":"Campaña de verano de Ego a bordo.","thumbnailUrl":"https://[TU-DOMINIO]/assets/videos/horizontal/campana-verano-ego-barco.jpg","contentUrl":"https://[TU-DOMINIO]/assets/videos/horizontal/campana-verano-ego-barco.mp4","uploadDate":"2026-10-06","duration":"PT45S","director":{"@type":"Person","name":"Fran Cisterne"}}
   </script>
-  <script type="application/ld+json">
+  <script type="application/ld+json" data-project="tracksuit-dlfc-24-25">
   {"@context":"https://schema.org","@type":"VideoObject","name":"Tracksuit DLFC 24/25","description":"Pieza para Tracksuit DLFC 24/25.","thumbnailUrl":"https://[TU-DOMINIO]/assets/videos/horizontal/tracksuit-dlfc-24-25.jpg","contentUrl":"https://[TU-DOMINIO]/assets/videos/horizontal/tracksuit-dlfc-24-25.mp4","uploadDate":"2026-10-06","duration":"PT44S","director":{"@type":"Person","name":"Fran Cisterne"}}
   </script>
-  <script type="application/ld+json">
+  <script type="application/ld+json" data-project="granada-2026-jaleo">
   {"@context":"https://schema.org","@type":"VideoObject","name":"Granada 2026 — Jaleo","description":"Pieza de Granada 2026, Jaleo.","thumbnailUrl":"https://[TU-DOMINIO]/assets/videos/horizontal/granada-2026-jaleo.jpg","contentUrl":"https://[TU-DOMINIO]/assets/videos/horizontal/granada-2026-jaleo.mp4","uploadDate":"2026-10-06","duration":"PT53S","director":{"@type":"Person","name":"Fran Cisterne"}}
   </script>
-  <script type="application/ld+json">
+  <script type="application/ld+json" data-project="elysium-corporativo-obra">
   {"@context":"https://schema.org","@type":"VideoObject","name":"Elysium","description":"Corporativo de Elysium, obra.","thumbnailUrl":"https://[TU-DOMINIO]/assets/videos/horizontal/elysium-corporativo-obra.jpg","contentUrl":"https://[TU-DOMINIO]/assets/videos/horizontal/elysium-corporativo-obra.mp4","uploadDate":"2026-10-06","duration":"PT1M","director":{"@type":"Person","name":"Fran Cisterne"}}
   </script>
-  <script type="application/ld+json">
+  <script type="application/ld+json" data-project="laura-y-daniel">
   {"@context":"https://schema.org","@type":"VideoObject","name":"Laura y Daniel","description":"Vídeo de Laura y Daniel.","thumbnailUrl":"https://[TU-DOMINIO]/assets/videos/horizontal/laura-y-daniel.jpg","contentUrl":"https://[TU-DOMINIO]/assets/videos/horizontal/laura-y-daniel.mp4","uploadDate":"2026-10-06","duration":"PT2M45S","director":{"@type":"Person","name":"Fran Cisterne"}}
   </script>
-  <script type="application/ld+json">
+  <script type="application/ld+json" data-project="gala-eleccion-abanderadas-2026">
   {"@context":"https://schema.org","@type":"VideoObject","name":"Gala Elección Abanderadas","description":"Pieza vertical de la Gala Elección de Abanderadas 2026.","thumbnailUrl":"https://[TU-DOMINIO]/assets/videos/vertical/gala-eleccion-abanderadas-2026.jpg","contentUrl":"https://[TU-DOMINIO]/assets/videos/vertical/gala-eleccion-abanderadas-2026.mp4","uploadDate":"2026-10-06","duration":"PT1M2S","director":{"@type":"Person","name":"Fran Cisterne"}}
   </script>
-  <script type="application/ld+json">
+  <script type="application/ld+json" data-project="madewithcalma-x-egobodegas">
   {"@context":"https://schema.org","@type":"VideoObject","name":"Made with Calma × Ego Bodegas","description":"Pieza vertical para Made with Calma y Ego Bodegas.","thumbnailUrl":"https://[TU-DOMINIO]/assets/videos/vertical/madewithcalma-x-egobodegas.jpg","contentUrl":"https://[TU-DOMINIO]/assets/videos/vertical/madewithcalma-x-egobodegas.mp4","uploadDate":"2026-10-06","duration":"PT46S","director":{"@type":"Person","name":"Fran Cisterne"}}
   </script>
-  <script type="application/ld+json">
+  <script type="application/ld+json" data-project="marvimundo-x-fanfutura">
   {"@context":"https://schema.org","@type":"VideoObject","name":"Marvimundo × Fanfutura","description":"Pieza vertical para Marvimundo y Fanfutura.","thumbnailUrl":"https://[TU-DOMINIO]/assets/videos/vertical/marvimundo-x-fanfutura.jpg","contentUrl":"https://[TU-DOMINIO]/assets/videos/vertical/marvimundo-x-fanfutura.mp4","uploadDate":"2026-10-06","duration":"PT45S","director":{"@type":"Person","name":"Fran Cisterne"}}
   </script>
-  <script type="application/ld+json">
+  <script type="application/ld+json" data-project="dia-de-la-madre-ego-bodegas">
   {"@context":"https://schema.org","@type":"VideoObject","name":"Día de la Madre","description":"Pieza vertical de Ego Bodegas para el Día de la Madre.","thumbnailUrl":"https://[TU-DOMINIO]/assets/videos/vertical/dia-de-la-madre-ego-bodegas.jpg","contentUrl":"https://[TU-DOMINIO]/assets/videos/vertical/dia-de-la-madre-ego-bodegas.mp4","uploadDate":"2026-10-06","duration":"PT1M22S","director":{"@type":"Person","name":"Fran Cisterne"}}
   </script>
-  <script type="application/ld+json">
+  <script type="application/ld+json" data-project="dia-del-padre-ego-bodegas">
   {"@context":"https://schema.org","@type":"VideoObject","name":"Día del Padre","description":"Pieza vertical de Ego Bodegas para el Día del Padre.","thumbnailUrl":"https://[TU-DOMINIO]/assets/videos/vertical/dia-del-padre-ego-bodegas.jpg","contentUrl":"https://[TU-DOMINIO]/assets/videos/vertical/dia-del-padre-ego-bodegas.mp4","uploadDate":"2026-10-06","duration":"PT59S","director":{"@type":"Person","name":"Fran Cisterne"}}
+  </script>
+
+  <!-- One project per page: ?project=<slug>. No param shows the first. #slide-N still resolves. -->
+  <script>
+    (function () {
+      var root = document.getElementById("projects");
+      if (!root) return;
+      var slides = Array.prototype.slice.call(root.querySelectorAll(".slide"));
+      if (!slides.length) return;
+
+      var params = new URLSearchParams(window.location.search);
+      var slug = params.get("project");
+      var index = -1;
+
+      if (slug) {
+        for (var i = 0; i < slides.length; i++) {
+          if (slides[i].getAttribute("data-project") === slug) { index = i; break; }
+        }
+      }
+      if (index < 0 && window.location.hash) {
+        var hash = window.location.hash.slice(1);
+        for (var j = 0; j < slides.length; j++) {
+          if (slides[j].id === hash) { index = j; break; }
+        }
+      }
+      if (index < 0) index = 0;
+
+      for (var k = 0; k < slides.length; k++) {
+        slides[k].classList.toggle("is-active", k === index);
+      }
+
+      var current = slides[index];
+      var currentSlug = current.getAttribute("data-project");
+      var titleEl = current.querySelector(".slide__title");
+      if (titleEl && titleEl.textContent) {
+        document.title = titleEl.textContent.replace(/\s+/g, " ").trim() + " — Fran Cisterne";
+      }
+      if (currentSlug && slug !== currentSlug) {
+        history.replaceState(null, "", "projects.html?project=" + encodeURIComponent(currentSlug));
+      }
+
+      var pager = document.createElement("nav");
+      pager.className = "slide__pager";
+      pager.setAttribute("aria-label", "Otros proyectos");
+      function addLink(slide, label) {
+        if (!slide) return;
+        var link = document.createElement("a");
+        link.className = "slide__pager-link";
+        link.href = "projects.html?project=" + encodeURIComponent(slide.getAttribute("data-project"));
+        link.textContent = label;
+        pager.appendChild(link);
+      }
+      addLink(slides[index - 1], "← Anterior");
+      addLink(slides[index + 1], "Siguiente →");
+      var head = current.querySelector(".slide__head");
+      if (head && pager.childNodes.length) head.appendChild(pager);
+
+      var blocks = document.querySelectorAll('script[type="application/ld+json"][data-project]');
+      for (var n = 0; n < blocks.length; n++) {
+        if (blocks[n].getAttribute("data-project") !== currentSlug && blocks[n].parentNode) {
+          blocks[n].parentNode.removeChild(blocks[n]);
+        }
+      }
+    })();
   </script>
 </body>
 </html>
