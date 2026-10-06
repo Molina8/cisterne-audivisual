@@ -217,6 +217,38 @@ figure { margin: 0; }
   text-transform: uppercase;
   color: var(--c-meta);
 }
+.work-group + .work-group {
+  margin-top: var(--s-12);
+}
+.work-group__title {
+  margin: 0 0 var(--s-4) 0;
+  font-size: var(--t-14);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: var(--f-weight-light);
+}
+.work-list--vertical {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--s-3);
+}
+.work-list--vertical .work-item__thumb {
+  aspect-ratio: 9 / 16;
+}
+.work-list--vertical .work-item__meta {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--s-1);
+}
+.work-list--vertical .work-item__title {
+  font-size: var(--t-16);
+}
+.work-item--contain .work-item__video,
+.slide--contain .slide__video,
+.slide--portrait .slide__video {
+  object-fit: contain;
+  background: #000;
+}
 
 /* =========================================================
    PHOTO GRID
@@ -647,6 +679,9 @@ figure { margin: 0; }
 
 /* Carousel responsive */
 @media (max-width: 960px) {
+  .work-list--vertical {
+    grid-template-columns: repeat(3, 1fr);
+  }
   .slide__layout {
     grid-template-columns: 1fr;
     height: auto;
@@ -690,6 +725,9 @@ figure { margin: 0; }
   }
   .photo-grid {
     grid-template-columns: 1fr;
+  }
+  .work-list--vertical {
+    grid-template-columns: repeat(2, 1fr);
   }
   .hero__overlay {
     inset: auto 0 var(--s-4) 0;

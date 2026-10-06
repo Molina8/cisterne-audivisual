@@ -12,25 +12,27 @@ python -m http.server 8080
 ```
 cisterne-audiovisual/
 ├── index.html
+├── projects.html
 ├── style.css
 └── assets/
     ├── videos/
-    │   ├── placeholder.mp4   # hero reel + 4 work thumbs
-    │   └── placeholder.jpg   # poster fallback
+    │   ├── reel.mp4          # hero loop (campaña Ego vino verano)
+    │   ├── vertical/
+    │   └── horizontal/
     └── photos/
-        ├── session-01/
-        ├── session-02/
-        ├── session-03/
-        ├── session-04/
-        └── session-05/
+        ├── ego-barco/
+        ├── bangalore-lorca/
+        └── …                 # one folder per session
 ```
 
+Web copies are H.264, max 1080p, so they fit GitHub Pages (100 MB per file). Originals from the transfers are not in the repo.
+
 ## To replace placeholders
-1. **Hero reel**: drop your reel into `assets/videos/` and update `<source src>` in `index.html`.
-2. **Work videos**: replace `Project One`…`Project Four` titles, categories and poster JPGs.
-3. **Photos**: drop 6–10 JPEGs per session folder, then edit the `.photo-card` blocks.
+1. **Hero reel**: replace `assets/videos/reel.mp4` and `reel.jpg`.
+2. **Work videos**: add an mp4 plus a jpg poster under `assets/videos/vertical/` or `horizontal/`, then a slide in `projects.html` and a card in `index.html`. File names stay lowercase, without spaces or accents.
+3. **Photos**: add JPEGs under `assets/photos/<session>/` and a `.photo-card` in `index.html`.
 4. **About**: edit the `.about__text` paragraph.
-5. **Contact**: update `mailto:`, IG and Vimeo URLs.
+5. **Contact**: update `mailto:`, IG and phone.
 
 ## Specs
 - Background `#000`, text `#fff`, meta `#999`, rule `#444`.
