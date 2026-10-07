@@ -33,6 +33,17 @@
   <link rel="canonical" href="https://[TU-DOMINIO]/" />
 
   <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      document.documentElement.classList.add("js-reveal");
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          if (!window.__cisterneReveal) document.documentElement.classList.remove("js-reveal");
+        }, 1500);
+      });
+    })();
+  </script>
 
   <!-- Structured data: see also per-project VideoObject scripts in body -->
   <script type="application/ld+json">
@@ -80,10 +91,10 @@
   </header>
   <main id="top">
 
-    <!-- HERO -->
-    <section class="hero" aria-label="Reel">
-      <video class="hero__video" autoplay muted playsinline loop preload="metadata" poster="assets/videos/reel.jpg">
-        <source src="assets/videos/reel.mp4" type="video/mp4" />
+    <!-- HERO — Granada 2026 (reel.mp4 kept on disk, unused here) -->
+    <section class="hero" aria-label="Granada 2026 — Jaleo">
+      <video class="hero__video" autoplay muted playsinline loop preload="metadata" poster="assets/videos/horizontal/granada-2026-jaleo.jpg">
+        <source src="assets/videos/horizontal/granada-2026-jaleo.mp4" type="video/mp4" />
       </video>
       <div class="hero__overlay">
         <h1 class="hero__title">FRAN CISTERNE</h1>
@@ -96,83 +107,58 @@
       <h2 id="work-video-title" class="section__title">Trabajo</h2>
 
       <div class="work-group" id="horizontal">
-        <h3 class="work-group__title">Horizontal</h3>
         <ol class="work-list">
           <li class="work-item">
-            <a href="projects.html?project=campana-ego-vino-verano" class="work-item__link">
+            <a href="projects.html?project=campana-ego-vino-verano" class="work-item__link" aria-label="Cómo se sirve el vino en verano">
               <div class="work-item__thumb">
                 <video class="work-item__video" muted playsinline loop preload="none" poster="assets/videos/horizontal/campana-ego-vino-verano.jpg">
                   <source src="assets/videos/horizontal/campana-ego-vino-verano.mp4" type="video/mp4" />
                 </video>
               </div>
-              <div class="work-item__meta">
-                <span class="work-item__title">Cómo se sirve el vino en verano</span>
-                <span class="work-item__category">Ego · Campaña</span>
-              </div>
             </a>
           </li>
           <li class="work-item">
-            <a href="projects.html?project=campana-verano-ego-barco" class="work-item__link">
+            <a href="projects.html?project=campana-verano-ego-barco" class="work-item__link" aria-label="Campaña Verano Ego Barco">
               <div class="work-item__thumb">
                 <video class="work-item__video" muted playsinline loop preload="none" poster="assets/videos/horizontal/campana-verano-ego-barco.jpg">
                   <source src="assets/videos/horizontal/campana-verano-ego-barco.mp4" type="video/mp4" />
                 </video>
               </div>
-              <div class="work-item__meta">
-                <span class="work-item__title">Campaña Verano Ego Barco</span>
-                <span class="work-item__category">Ego Bodegas</span>
-              </div>
             </a>
           </li>
           <li class="work-item work-item--contain">
-            <a href="projects.html?project=tracksuit-dlfc-24-25" class="work-item__link">
+            <a href="projects.html?project=tracksuit-dlfc-24-25" class="work-item__link" aria-label="Tracksuit DLFC 24/25">
               <div class="work-item__thumb">
                 <video class="work-item__video" muted playsinline loop preload="none" poster="assets/videos/horizontal/tracksuit-dlfc-24-25.jpg">
                   <source src="assets/videos/horizontal/tracksuit-dlfc-24-25.mp4" type="video/mp4" />
                 </video>
               </div>
-              <div class="work-item__meta">
-                <span class="work-item__title">Tracksuit DLFC 24/25</span>
-                <span class="work-item__category">Horizontal</span>
-              </div>
             </a>
           </li>
           <li class="work-item">
-            <a href="projects.html?project=granada-2026-jaleo" class="work-item__link">
+            <a href="projects.html?project=granada-2026-jaleo" class="work-item__link" aria-label="Granada 2026 — Jaleo">
               <div class="work-item__thumb">
                 <video class="work-item__video" muted playsinline loop preload="none" poster="assets/videos/horizontal/granada-2026-jaleo.jpg">
                   <source src="assets/videos/horizontal/granada-2026-jaleo.mp4" type="video/mp4" />
                 </video>
               </div>
-              <div class="work-item__meta">
-                <span class="work-item__title">Granada 2026 — Jaleo</span>
-                <span class="work-item__category">2026</span>
-              </div>
             </a>
           </li>
           <li class="work-item">
-            <a href="projects.html?project=elysium-corporativo-obra" class="work-item__link">
+            <a href="projects.html?project=elysium-corporativo-obra" class="work-item__link" aria-label="Elysium">
               <div class="work-item__thumb">
                 <video class="work-item__video" muted playsinline loop preload="none" poster="assets/videos/horizontal/elysium-corporativo-obra.jpg">
                   <source src="assets/videos/horizontal/elysium-corporativo-obra.mp4" type="video/mp4" />
                 </video>
               </div>
-              <div class="work-item__meta">
-                <span class="work-item__title">Elysium</span>
-                <span class="work-item__category">Corporativo · Obra</span>
-              </div>
             </a>
           </li>
           <li class="work-item">
-            <a href="projects.html?project=laura-y-daniel" class="work-item__link">
+            <a href="projects.html?project=laura-y-daniel" class="work-item__link" aria-label="Laura y Daniel">
               <div class="work-item__thumb">
                 <video class="work-item__video" muted playsinline loop preload="none" poster="assets/videos/horizontal/laura-y-daniel.jpg">
                   <source src="assets/videos/horizontal/laura-y-daniel.mp4" type="video/mp4" />
                 </video>
-              </div>
-              <div class="work-item__meta">
-                <span class="work-item__title">Laura y Daniel</span>
-                <span class="work-item__category">Horizontal</span>
               </div>
             </a>
           </li>
@@ -180,70 +166,49 @@
       </div>
 
       <div class="work-group" id="vertical">
-        <h3 class="work-group__title">Vertical</h3>
         <ol class="work-list work-list--vertical">
           <li class="work-item">
-            <a href="projects.html?project=gala-eleccion-abanderadas-2026" class="work-item__link">
+            <a href="projects.html?project=gala-eleccion-abanderadas-2026" class="work-item__link" aria-label="Gala Abanderadas">
               <div class="work-item__thumb">
                 <video class="work-item__video" muted playsinline loop preload="none" poster="assets/videos/vertical/gala-eleccion-abanderadas-2026.jpg">
                   <source src="assets/videos/vertical/gala-eleccion-abanderadas-2026.mp4" type="video/mp4" />
                 </video>
               </div>
-              <div class="work-item__meta">
-                <span class="work-item__title">Gala Abanderadas</span>
-                <span class="work-item__category">2026</span>
-              </div>
             </a>
           </li>
           <li class="work-item">
-            <a href="projects.html?project=madewithcalma-x-egobodegas" class="work-item__link">
+            <a href="projects.html?project=madewithcalma-x-egobodegas" class="work-item__link" aria-label="Made with Calma">
               <div class="work-item__thumb">
                 <video class="work-item__video" muted playsinline loop preload="none" poster="assets/videos/vertical/madewithcalma-x-egobodegas.jpg">
                   <source src="assets/videos/vertical/madewithcalma-x-egobodegas.mp4" type="video/mp4" />
                 </video>
               </div>
-              <div class="work-item__meta">
-                <span class="work-item__title">Made with Calma</span>
-                <span class="work-item__category">Ego Bodegas</span>
-              </div>
             </a>
           </li>
           <li class="work-item">
-            <a href="projects.html?project=marvimundo-x-fanfutura" class="work-item__link">
+            <a href="projects.html?project=marvimundo-x-fanfutura" class="work-item__link" aria-label="Marvimundo">
               <div class="work-item__thumb">
                 <video class="work-item__video" muted playsinline loop preload="none" poster="assets/videos/vertical/marvimundo-x-fanfutura.jpg">
                   <source src="assets/videos/vertical/marvimundo-x-fanfutura.mp4" type="video/mp4" />
                 </video>
               </div>
-              <div class="work-item__meta">
-                <span class="work-item__title">Marvimundo</span>
-                <span class="work-item__category">Fanfutura</span>
-              </div>
             </a>
           </li>
           <li class="work-item">
-            <a href="projects.html?project=dia-de-la-madre-ego-bodegas" class="work-item__link">
+            <a href="projects.html?project=dia-de-la-madre-ego-bodegas" class="work-item__link" aria-label="Día de la Madre">
               <div class="work-item__thumb">
                 <video class="work-item__video" muted playsinline loop preload="none" poster="assets/videos/vertical/dia-de-la-madre-ego-bodegas.jpg">
                   <source src="assets/videos/vertical/dia-de-la-madre-ego-bodegas.mp4" type="video/mp4" />
                 </video>
               </div>
-              <div class="work-item__meta">
-                <span class="work-item__title">Día de la Madre</span>
-                <span class="work-item__category">Ego Bodegas</span>
-              </div>
             </a>
           </li>
           <li class="work-item">
-            <a href="projects.html?project=dia-del-padre-ego-bodegas" class="work-item__link">
+            <a href="projects.html?project=dia-del-padre-ego-bodegas" class="work-item__link" aria-label="Día del Padre">
               <div class="work-item__thumb">
                 <video class="work-item__video" muted playsinline loop preload="none" poster="assets/videos/vertical/dia-del-padre-ego-bodegas.jpg">
                   <source src="assets/videos/vertical/dia-del-padre-ego-bodegas.mp4" type="video/mp4" />
                 </video>
-              </div>
-              <div class="work-item__meta">
-                <span class="work-item__title">Día del Padre</span>
-                <span class="work-item__category">Ego Bodegas</span>
               </div>
             </a>
           </li>
@@ -427,5 +392,6 @@
     </footer>
 
   </main>
+  <script src="main.js" defer></script>
 </body>
 </html>
