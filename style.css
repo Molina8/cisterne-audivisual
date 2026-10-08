@@ -224,6 +224,7 @@ figure { margin: 0; }
   font-size: var(--t-24);
   font-weight: var(--f-weight-light);
   letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 .work-item__category {
   font-size: var(--t-12);
@@ -545,6 +546,7 @@ html.js .slide.is-active { display: block; }
   font-weight: var(--f-weight-light);
   letter-spacing: 0.02em;
   line-height: 1;
+  text-transform: uppercase;
 }
 .slide__meta {
   margin: 0;
