@@ -364,21 +364,6 @@
         history.replaceState(null, "", "projects.html?project=" + encodeURIComponent(currentSlug));
       }
 
-      var pager = document.createElement("nav");
-      pager.className = "slide__pager";
-      pager.setAttribute("aria-label", "Otros proyectos");
-      function addLink(slide, label) {
-        if (!slide) return;
-        var link = document.createElement("a");
-        link.className = "slide__pager-link";
-        link.href = "projects.html?project=" + encodeURIComponent(slide.getAttribute("data-project"));
-        link.textContent = label;
-        pager.appendChild(link);
-      }
-      addLink(slides[index - 1], "← Anterior");
-      addLink(slides[index + 1], "Siguiente →");
-      var head = current.querySelector(".slide__head");
-      if (head && pager.childNodes.length) head.appendChild(pager);
 
       var blocks = document.querySelectorAll('script[type="application/ld+json"][data-project]');
       for (var n = 0; n < blocks.length; n++) {
