@@ -37,6 +37,7 @@
 
   /* Layout */
   --w-page:  min(1400px, 92vw);
+  --w-gutter: calc((100% - var(--w-page)) / 2); /* matches .section auto margins */
 }
 
 /* RESET */
@@ -71,7 +72,9 @@ figure { margin: 0; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--s-3) var(--w-page);
+  flex-wrap: wrap; /* logo + links never overlap at any width */
+  row-gap: var(--s-1);
+  padding: var(--s-3) var(--w-gutter);
   mix-blend-mode: difference; /* keep logo readable on dark video hero */
 }
 .nav__logo {
@@ -87,7 +90,10 @@ figure { margin: 0; }
 }
 .nav__links {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   gap: var(--s-4);
+  row-gap: var(--s-2);
 }
 .nav__links a {
   font-size: var(--t-12);
@@ -132,7 +138,7 @@ figure { margin: 0; }
 .hero__overlay {
   position: absolute;
   inset: auto 0 var(--s-8) 0;
-  padding: 0 var(--w-page);
+  padding: 0 var(--w-gutter);
   display: flex;
   flex-direction: column;
   gap: var(--s-1);
@@ -258,6 +264,87 @@ figure { margin: 0; }
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--c-meta);
+}
+
+/* =========================================================
+   PHOTO LIGHTBOX — Zara-style fullscreen viewer
+   ========================================================= */
+.photo-card__trigger {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: zoom-in;
+  -webkit-tap-highlight-color: transparent;
+}
+.photo-card__trigger:focus-visible {
+  outline: 1px solid var(--c-meta);
+  outline-offset: 3px;
+}
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100; /* above the fixed nav */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.96);
+  cursor: zoom-out;
+}
+.lightbox[hidden] { display: none; }
+.lightbox__figure {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox__img {
+  display: block;
+  max-width: min(1200px, 92vw);
+  max-height: 92vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.lightbox__close {
+  position: absolute;
+  top: var(--s-3);
+  right: var(--s-3);
+  width: 44px; /* touch target */
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--c-fg);
+  cursor: pointer;
+}
+.lightbox__close svg {
+  width: 22px;
+  height: 22px;
+}
+.lightbox__close:hover,
+.lightbox__close:focus-visible {
+  color: var(--c-meta);
+}
+.lightbox__close:focus-visible {
+  outline: 1px solid var(--c-meta);
+  outline-offset: 3px;
+}
+html.lightbox-open { overflow: hidden; } /* background scroll lock */
+@media (prefers-reduced-motion: no-preference) {
+  .lightbox:not([hidden]) {
+    animation: lightbox-in 220ms ease-out both;
+  }
+}
+@keyframes lightbox-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 /* =========================================================
@@ -576,6 +663,18 @@ html.js .slide.is-active { display: block; }
   display: block;
 }
 
+/* Projects PDP (desktop): centered name and video title, same aesthetics as home */
+@media (min-width: 961px) {
+  .slide__head,
+  .slide__credits {
+    text-align: center;
+  }
+  .slide__credits {
+    grid-template-columns: max-content max-content;
+    justify-content: center;
+  }
+}
+
 
 /* Projects page responsive */
 @media (max-width: 960px) {
@@ -620,9 +719,7 @@ html.js .slide.is-active { display: block; }
     padding: var(--s-8) 0;
     width: 92vw;
   }
-  .photo-grid {
-    grid-template-columns: 1fr;
-  }
+  /* Photo grid stays 2 columns on mobile (no 1fr override). */
   .work-list--vertical {
     grid-template-columns: repeat(2, 1fr);
   }
