@@ -152,7 +152,7 @@ figure { margin: 0; }
 }
 .hero__title {
   margin: 0;
-  font-weight: var(--f-weight-thin);
+  font-weight: var(--f-weight-light);
   font-size: clamp(var(--t-24), 6.5vw, 60px);
   line-height: 1;
   letter-spacing: 0.05em;
@@ -167,7 +167,7 @@ figure { margin: 0; }
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--c-meta);
-  font-weight: var(--f-weight-thin);
+  font-weight: var(--f-weight-light);
   white-space: nowrap;
 }
 
