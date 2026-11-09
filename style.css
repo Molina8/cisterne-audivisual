@@ -16,6 +16,7 @@
   --f-weight-thin:   100;
   --f-weight-light:  300;
   --f-weight-base:   400;
+  --f-weight-bold:   700;
 
   /* Scale */
   --t-12: 0.75rem;
@@ -158,7 +159,7 @@ figure { margin: 0; }
   white-space: nowrap;
 }
 .hero__title strong {
-  font-weight: var(--f-weight-base);
+  font-weight: var(--f-weight-bold);
 }
 .hero__tag {
   margin: 0;
