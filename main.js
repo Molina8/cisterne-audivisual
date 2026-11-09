@@ -61,3 +61,64 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 })();
+
+/* ---- Photo lightbox — Zara-style fullscreen viewer (index.html) ---- */
+(function () {
+  "use strict";
+
+  var lightbox = document.getElementById("lightbox");
+  if (!lightbox) return;
+
+  var lbImg = lightbox.querySelector(".lightbox__img");
+  var lbClose = lightbox.querySelector(".lightbox__close");
+  var triggers = document.querySelectorAll(".photo-card__trigger");
+  var lastTrigger = null;
+
+  function openLightbox(trigger) {
+    var img = trigger.querySelector(".photo-card__img");
+    if (!img) return;
+    lastTrigger = trigger;
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lightbox.hidden = false;
+    document.documentElement.classList.add("lightbox-open");
+    lbClose.focus();
+  }
+
+  function closeLightbox() {
+    if (lightbox.hidden) return;
+    lightbox.hidden = true;
+    lbImg.src = "";
+    document.documentElement.classList.remove("lightbox-open");
+    if (lastTrigger) lastTrigger.focus();
+    lastTrigger = null;
+  }
+
+  function onTriggerClick(e) {
+    openLightbox(e.currentTarget);
+  }
+
+  for (var i = 0; i < triggers.length; i++) {
+    triggers[i].addEventListener("click", onTriggerClick);
+  }
+
+  lbClose.addEventListener("click", closeLightbox);
+
+  /* Click anywhere outside the photo closes it (backdrop + figure padding). */
+  lightbox.addEventListener("click", function (e) {
+    if (e.target === lbImg) return;
+    closeLightbox();
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (lightbox.hidden) return;
+    if (e.key === "Escape") {
+      e.preventDefault();
+      closeLightbox();
+    } else if (e.key === "Tab") {
+      /* Single focusable element: keep focus trapped on the close button. */
+      e.preventDefault();
+      lbClose.focus();
+    }
+  });
+})();
