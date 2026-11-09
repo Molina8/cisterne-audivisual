@@ -137,21 +137,28 @@ figure { margin: 0; }
 }
 .hero__overlay {
   position: absolute;
-  inset: auto 0 var(--s-8) 0;
+  inset: 0;
   padding: 0 var(--w-gutter);
+  /* Center name + tag in the hero; top inset clears fixed nav */
+  padding-top: calc(var(--s-3) * 2 + 1.5rem);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: var(--s-1);
   pointer-events: none;
   z-index: 2;
+  box-sizing: border-box;
 }
 .hero__title {
   margin: 0;
-  font-weight: var(--f-weight-light);
+  font-weight: var(--f-weight-thin);
   font-size: clamp(var(--t-24), 6.5vw, 60px);
   line-height: 1;
   letter-spacing: 0.05em;
   white-space: nowrap;
+}
+.hero__title strong {
+  font-weight: var(--f-weight-base);
 }
 .hero__tag {
   margin: 0;
@@ -159,7 +166,7 @@ figure { margin: 0; }
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--c-meta);
-  font-weight: var(--f-weight-light);
+  font-weight: var(--f-weight-thin);
   white-space: nowrap;
 }
 
@@ -724,8 +731,8 @@ html.js .slide.is-active { display: block; }
     grid-template-columns: repeat(2, 1fr);
   }
   .hero__overlay {
-    inset: auto 0 var(--s-4) 0;
-    padding: 0 var(--s-3);
+    padding-left: var(--s-3);
+    padding-right: var(--s-3);
   }
   .about__text {
     font-size: var(--t-16);
